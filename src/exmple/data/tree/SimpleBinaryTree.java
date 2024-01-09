@@ -11,6 +11,10 @@ public class SimpleBinaryTree<E> implements BinaryTree<E>{
         return root;
     }
 
+    /**
+     * 根节点构建
+     * @param root
+     */
     public SimpleBinaryTree(TreeNode<E> root) {
         this.root = root;
     }
@@ -18,6 +22,12 @@ public class SimpleBinaryTree<E> implements BinaryTree<E>{
     public SimpleBinaryTree() {
 
     }
+
+    /**
+     * 前序和中序遍历集合构建树
+     * @param pre
+     * @param in
+     */
     public SimpleBinaryTree(List<E> pre,List<E> in) {
         if(in!=null&&pre!=null&&in.size()==pre.size()&&pre.size()>0){
             createTree(pre,in);
